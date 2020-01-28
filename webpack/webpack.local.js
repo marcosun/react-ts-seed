@@ -10,6 +10,5 @@ module.exports = merge.smart(common, {
   devServer: {
     contentBase: path.appSrc,
     historyApiFallback: true,
-    hot: true,
   },
 });
