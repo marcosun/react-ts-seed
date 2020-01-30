@@ -8,6 +8,11 @@ module.exports = {
     app: path.appSrc,
   },
 
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM',
+  },
+
   output: {
     filename: 'js/[name].[hash].js',
     chunkFilename: 'js/[name].[chunkhash].js',
@@ -42,6 +47,13 @@ module.exports = {
       appMountId: 'app',
       chunks: ['runtime', 'vendors', 'app'], // Specify javascript load order
       chunksSortMode: 'manual',
+      scripts: [{
+        src: 'https://unpkg.com/react@16.12.0/umd/react.production.min.js',
+        crossorigin: true,
+      }, {
+        src: 'https://unpkg.com/react-dom@16.12.0/umd/react-dom.production.min.js',
+        crossorigin: true,
+      }],
     }),
   ],
 
