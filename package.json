@@ -2,6 +2,7 @@
   "name": "react-ts-seed",
   "version": "0.0.1",
   "description": "A scaffold for building React apps.",
+  "main": "src/index.tsx",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack/webpack.local.js --open",
     "build:analyse": "webpack --config ./webpack/webpack.analyse.js",
