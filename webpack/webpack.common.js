@@ -11,6 +11,7 @@ module.exports = {
   externals: {
     react: 'React',
     'react-dom': 'ReactDOM',
+    'react-router-dom': 'ReactRouterDOM',
   },
 
   output: {
@@ -53,6 +54,9 @@ module.exports = {
       }, {
         src: 'https://unpkg.com/react-dom@16.12.0/umd/react-dom.production.min.js',
         crossorigin: true,
+      }, {
+        src: 'https://unpkg.com/react-router-dom@5.1.2/umd/react-router-dom.min.js',
+        crossorigin: true,
       }],
     }),
   ],
@@ -67,7 +71,7 @@ module.exports = {
         vendors: {
           name: 'vendors',
           test: /[\\/]node_modules[\\/]/,
-          priority: -20,
+          priority: -10,
         },
       },
     },
