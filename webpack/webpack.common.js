@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackTemplate = require('html-webpack-template');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const path = require('./path');
 
 module.exports = {
@@ -12,6 +13,7 @@ module.exports = {
     react: 'React',
     'react-dom': 'ReactDOM',
     'react-router-dom': 'ReactRouterDOM',
+    mobx: 'mobx',
   },
 
   output: {
@@ -57,6 +59,9 @@ module.exports = {
       }, {
         src: 'https://unpkg.com/react-router-dom@5.1.2/umd/react-router-dom.min.js',
         crossorigin: true,
+      }, {
+        src: 'https://unpkg.com/mobx@5.15.4/lib/mobx.umd.min.js',
+        crossorigin: true,
       }],
     }),
   ],
@@ -78,6 +83,7 @@ module.exports = {
   },
 
   resolve: {
+    plugins: [new TsconfigPathsPlugin()],
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
 };

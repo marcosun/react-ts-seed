@@ -8,12 +8,8 @@ export default function () {
   return (
     <Router>
       <Suspense fallback={<div>Loading...</div>}>
-        <Route exact path="/">
-          <List />
-        </Route>
-        <Route exact path="/detail">
-          <Detail />
-        </Route>
+        <Route exact path="/" component={List} />
+        <Route exact path="/detail" component={Detail} />
       </Suspense>
     </Router>
   );

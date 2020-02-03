@@ -14,6 +14,9 @@
   "author": "marcosun <marcoinbristol@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "mobx": "^5.15.4",
+    "mobx-logger": "^0.7.1",
+    "mobx-react": "^6.1.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2"
@@ -27,6 +30,7 @@
     "html-webpack-template": "^6.2.0",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^6.2.1",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
     "typescript": "^3.7.5",
     "webpack": "^4.41.5",
     "webpack-bundle-analyzer": "^3.6.0",
