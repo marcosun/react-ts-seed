@@ -35,6 +35,31 @@ module.exports = {
         enforce: 'pre',
         test: /\.js$/,
         loaders: ['source-map-loader']
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: [
+          'style-loader',
+          'css-modules-typescript-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                localIdentName: '[local]--[hash:base64:5]'
+              }
+            }
+          },
+        ]
+      },
+      {
+        test: /\.css$/,
+        include: /node_modules/,
+        use: [
+          'style-loader',
+          'css-loader',
+        ]
+
       }
     ],
   },
