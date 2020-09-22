@@ -26,7 +26,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(t|j)s(x?)$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
         loaders: ['ts-loader'],
       },
@@ -59,7 +59,6 @@ module.exports = {
           'style-loader',
           'css-loader',
         ]
-
       }
     ],
   },
