@@ -75,16 +75,16 @@ module.exports = {
       chunks: ['runtime', 'vendors', 'app'], // Specify javascript load order
       chunksSortMode: 'manual',
       scripts: [{
-        src: 'https://unpkg.com/react@16.12.0/umd/react.production.min.js',
+        src: 'https://unpkg.com/react@16.14.0/umd/react.production.min.js',
         crossorigin: true,
       }, {
-        src: 'https://unpkg.com/react-dom@16.12.0/umd/react-dom.production.min.js',
+        src: 'https://unpkg.com/react-dom@16.14.0/umd/react-dom.production.min.js',
         crossorigin: true,
       }, {
-        src: 'https://unpkg.com/react-router-dom@5.1.2/umd/react-router-dom.min.js',
+        src: 'https://unpkg.com/react-router-dom@5.2.0/umd/react-router-dom.min.js',
         crossorigin: true,
       }, {
-        src: 'https://unpkg.com/mobx@5.15.4/lib/mobx.umd.min.js',
+        src: 'https://unpkg.com/mobx@5.15.7/lib/mobx.umd.min.js',
         crossorigin: true,
       }],
     }),
